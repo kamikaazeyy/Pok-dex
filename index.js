@@ -7,7 +7,7 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const pokeArray = [];
 
 async function getPokemon() {
-    for (let i = 901; i <= 905; i++) {
+    for (let i = 1; i <= 905; i++) {
         try {
             const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`);
             const poke = response.data;
